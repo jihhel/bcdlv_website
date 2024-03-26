@@ -14,7 +14,7 @@ executors:
   hugo-executor:
     docker:
       - image: cibuilds/hugo:latest
-    resource_class: small
+    resource_class: medium
 jobs:
   build:
     executor: hugo-executor
