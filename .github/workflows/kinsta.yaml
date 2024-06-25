@@ -64,7 +64,6 @@ jobs:
         with:
           name: public
           path: public
-
       - name: Push commit
         - uses: actions/checkout@v4
           with:
