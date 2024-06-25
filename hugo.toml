@@ -2,3 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'fr-fr'
 title = 'BCDLV'
 theme = 'ananke'
+
+
+googleAnalytics = ""
+enableRobotsTXT = true

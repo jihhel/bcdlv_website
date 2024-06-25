@@ -1,17 +1,18 @@
 ---
 title: "Badminton Club de Lille Vauban"
 
-cascade:
-  featured_image: '/images/gohugo-default-sample-hero-image.jpg'
+featured_image: '/images/placeholder.jpg'
 ---
-Bienvenue sur le site internet du club de badminton de Lille Vauban.
+# Rejoignez nous !
 
-Rejoignez nous !
-* insérer ici bouton qui envoie vers hello asso
-La nouvelle saison démarre le 1er septembre 2024
+C'est l'été au BCDLV ! Les inscriptions estivales sont ouvertes, elles vous permettront de vous inscrire jusqu'à la fin du mois d'août pour un tarif réduit.
 
+{{< button href="https://www.helloasso.com/associations/badminton-club-de-lille-vauban/adhesions/adhesion-estivale-bcdlv" >}}Accéder au formulaire d'inscription{{< /button >}}
 
-Les créneaux
+Les informations pour la saison 2024/2025 arriveront au cours de l'été.
+
+# Les créneaux
+* Lundi soir de 18h à 20h salle Pacôme
 Créneau famille : blablabla qui explique le créneau
 Le vendredi de 18h à 19h30 salle Montebello
 Créneaux jeu libre loisir : blablabla
@@ -19,19 +20,54 @@ Le lundi  de
 Le jeudi 
 Le jeudi 
 Créneau entraînement compétiteur : blablabla
-Le mercredi 
 
 
-Les salles
+# Les salles
 
-*liste des salles avec adresse*
+{{< columns >}}
 
-L'équipe
+{{< hall
+    name="Salle Charles Pacôme"
+    src="/images/pacome.jpg"
+    map="https://maps.app.goo.gl/yFjfCr2ZveJMxb6YA"
+    address="Boulevard de la Moselle"
+>}}
 
-Mettre des photos de tlm avec leur role au club
+<--->
 
-Contact
+{{< hall
+    name="Complexe Jacqueline Auriol" 
+    src="/images/montebello.jpg"
+    map="https://maps.app.goo.gl/ceEB2s3feoqLK5us7"
+    address="81 Rue Paul Lafargue"
+>}}
 
+<--->
+
+{{< hall
+    name="Salle Florence Arthaud"
+    src="/images/montebello.jpg"
+    map="https://maps.app.goo.gl/QnFPhCTfcQ1uCA1D8"
+    address="29 Rue Lestiboudois"
+>}}
+
+{{< /columns >}}
+
+# L'équipe
+
+{{< columns >}}
+
+{{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
+
+<--->
+
+{{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
+
+<--->
+
+{{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
+
+{{< /columns >}}
+
+# Contact
 {{< form-contact action="https://formspree.io/your@email.com" >}}
-
-https://formspree.io/
