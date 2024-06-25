@@ -12,14 +12,13 @@ C'est l'été au BCDLV ! Les inscriptions estivales sont ouvertes, elles vous pe
 Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 
 # Les créneaux
-* Lundi soir de 18h à 20h salle Pacôme
-Créneau famille : blablabla qui explique le créneau
-Le vendredi de 18h à 19h30 salle Montebello
-Créneaux jeu libre loisir : blablabla
-Le lundi  de 
-Le jeudi 
-Le jeudi 
-Créneau entraînement compétiteur : blablabla
+* Créneau enfants et famille le vendredi soir de 18h à 19h30 (en dehors des vacances scolaires)
+* Créneaux jeu libre
+    ** Lundi de 18h à 20h salle Charles Pacôme
+    ** Jeudi de 12h à 14h salle Jacqueline Auriol
+    ** Jeudi de 18h à 20h salle Florence Arthaud
+    ** Vendredi de 19h30 à 21h salle Jacqueline Auriol
+* Créneau entraînement confirmé le mercredi de 19h30 à 21h
 
 
 # Les salles
