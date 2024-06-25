@@ -62,7 +62,7 @@ jobs:
       - name: Checkout to deploy branch
         uses: actions/checkout@v4
         with:
-          ref: deploy
+          ref: deploy-dev
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
