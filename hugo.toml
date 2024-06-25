@@ -1,8 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = '/'
 languageCode = 'fr-fr'
 title = 'BCDLV'
 theme = 'ananke'
-
 
 googleAnalytics = ""
 enableRobotsTXT = true
