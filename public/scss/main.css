@@ -1,0 +1,36 @@
+a.markdown-btn {
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--font-color);
+  background-color: var(--md-bg-color-dark);
+  border-radius: .25rem;
+  text-align: center;
+  padding: 5px 1em 5px 1em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer; }
+  a.markdown-btn:hover, a.markdown-btn:active {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color); }
+
+.md-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+  .md-columns > div {
+    flex: 1 1;
+    margin: 1rem 0;
+    min-width: 100px;
+    max-width: 100%;
+    padding: 0 1rem; }
+  .md-columns .markdown-inner {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.measure-wide {
+  max-width: 66em; }
+
+form {
+  max-width: 34em; }
