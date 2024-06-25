@@ -1,0 +1,99 @@
+name: Deploy WordPress Theme to Kinsta
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env: 
+      HUGO_VERSION: 0.127.0
+
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      - name: Update theme
+        run: git submodule update --init --recursive
+        
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+          TZ: Europe/Paris
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      - name: Install zip
+        uses: montudor/action-zip@v1
+
+      - name: Zip output
+        run: zip -qq -r theme.zip * -x ".*" "node_modules/*" "*.md*" "*.log*" "*.json*" "*.lock*" "DOCKER_ENV" "docker_tag"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: theme
+          path: theme.zip
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: theme
+
+      - uses: montudor/action-zip@v1
+        with:
+          args: unzip -qq -o theme.zip -d .
+
+      - name: Remove theme.zip
+        run: rm theme.zip
+
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/staging'
+        uses: easingthemes/ssh-deploy@v4.1.8
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.STAGING_PORT }}
+          TARGET: ${{ secrets.STAGING_DIR }}
+          ARGS: "-rlgoDzvc -i --delete"
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        uses: easingthemes/ssh-deploy@v4.1.8
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PROD_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.PRODUCTION_PORT }}
+          TARGET: ${{ secrets.PRODUCTION_DIR }}
+          ARGS: "-rlgoDzvc -i --delete"
