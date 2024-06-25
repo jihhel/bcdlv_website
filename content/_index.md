@@ -61,6 +61,11 @@ Créneau entraînement compétiteur : blablabla
 
 <--->
 
+
+{{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
+
+<--->
+
 {{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
 
 <--->
