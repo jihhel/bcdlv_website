@@ -68,6 +68,3 @@ Créneau entraînement compétiteur : blablabla
 {{< board_mb name="Paul Le Bourvellec" src="/images/photo.jpg" role="Président">}}
 
 {{< /columns >}}
-
-# Contact
-{{< form-contact action="https://formspree.io/your@email.com" >}}
