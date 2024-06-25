@@ -1,4 +1,4 @@
-name: Deploy WordPress Theme to Kinsta
+name: Deploy to Kinsta
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+        run: echo "${{ steps.pages.outputs.base_url }}"
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
@@ -64,6 +64,9 @@ jobs:
         with:
           name: public
           path: public
+
+      - name: ls stuff
+        run: ls -ali 
       - name: Checkout to deploy branch
         uses: actions/checkout@v4
         with:
