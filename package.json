@@ -1,5 +1,5 @@
 {
-    "name": "bcdlv",
+    "name": "hello-world-hugo",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -11,10 +11,10 @@
     },
     "author": "",
     "license": "ISC",
+    "devDependencies": {
+        "hugo-bin": "^0.115.0"
+    },
     "dependencies": {
         "serve": "^14.2.1"
-    },
-    "devDependencies": {
-        "hugo-bin": "^0.124.0"
     }
 }
