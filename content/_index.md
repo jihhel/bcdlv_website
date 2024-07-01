@@ -29,7 +29,7 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
     <li>Jeudi 12h-14h salle Montebello</li>
     <li>Jeudi 18h-20h salle Florence Arthaud</li>
     <li>Vendredi 19h30-21h salle Montebello</li>
-    <li>Dimanc  he 9h-21h salle Lestiboudois</li>
+    <li>Dimanche 9h-21h salle Lestiboudois</li>
 </ul>
 <--->
 

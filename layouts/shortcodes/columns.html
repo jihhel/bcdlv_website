@@ -1,7 +1,7 @@
 <div class="md-columns">
     {{ range split .Inner "<--->" }}
-    {{ printf "<div class=\"column-inner\">"}}
+    {{ printf "<div class=\"column-inner\">"  | safeHTML }}
     {{ . | safeHTML }}
-    {{ printf "</div>" }}
+    {{ printf "</div>"  | safeHTML }}
     {{ end }}
 </div>
