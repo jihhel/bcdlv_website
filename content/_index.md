@@ -46,7 +46,7 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 {{< columns >}}
 {{< hall
     name="Salle Charles Pacôme"
-    src="images/pacome.jpg"
+    src="/images/pacome.jpg"
     map="https://maps.app.goo.gl/yFjfCr2ZveJMxb6YA"
     address="Boulevard de la Moselle"
 >}}
@@ -55,7 +55,7 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 
 {{< hall
     name="Salle Montebello" 
-    src="images/montebello.jpg"
+    src="/images/montebello.jpg"
     map="https://maps.app.goo.gl/ceEB2s3feoqLK5us7"
     address="81 Rue Paul Lafargue"
 >}}
@@ -64,7 +64,7 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 
 {{< hall
     name="Salle Lestiboudois" 
-    src="images/montebello.jpg"
+    src="/images/montebello.jpg"
     map="https://maps.app.goo.gl/yWsUfhs2Va7xwrNj8"
     address="Rue Lestiboudois"
 >}}
@@ -106,4 +106,4 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 
 # Nous contacter
 
-WIP
+{{< form >}}
