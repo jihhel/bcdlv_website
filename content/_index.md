@@ -11,20 +11,39 @@ C'est l'été au BCDLV ! Les inscriptions estivales sont ouvertes, elles vous pe
 
 Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 
-# Les créneaux
-* Créneau enfants et famille le vendredi soir de 18h à 19h30 (en dehors des vacances scolaires)
-* Créneaux jeu libre
-    * Lundi de 18h à 20h salle Charles Pacôme
-    * Jeudi de 12h à 14h salle Jacqueline Auriol
-    * Jeudi de 18h à 20h salle Florence Arthaud
-    * Vendredi de 19h30 à 21h salle Jacqueline Auriol
-* Créneau entraînement confirmé le mercredi de 19h30 à 21h
+---
 
+# Les créneaux
+
+{{< columns >}}
+
+<b>Famille et enfants</b>
+<ul>
+    <li>Vendredi soir de 18h à 19h30 (en dehors des vacances scolaires)</li>
+</ul>
+<--->
+
+<b>Jeu libre</b>
+<ul>
+    <li>Lundi 18h-20h salle Charles Pacôme</li>
+    <li>Jeudi 12h-14h salle Montebello</li>
+    <li>Jeudi 18h-20h salle Florence Arthaud</li>
+    <li>Vendredi 19h30-21h salle Montebello</li>
+    <li>Dimanc  he 9h-21h salle Lestiboudois</li>
+</ul>
+<--->
+
+<b>Entrainement confirmé</b>
+<ul>
+    <li>Mercredi 19h30-21h salle Montebello</li>
+</ul>
+{{< /columns >}}
+
+---
 
 # Les salles
 
 {{< columns >}}
-
 {{< hall
     name="Salle Charles Pacôme"
     src="/images/pacome.jpg"
@@ -35,7 +54,7 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 <--->
 
 {{< hall
-    name="Complexe Jacqueline Auriol" 
+    name="Salle Montebello" 
     src="/images/montebello.jpg"
     map="https://maps.app.goo.gl/ceEB2s3feoqLK5us7"
     address="81 Rue Paul Lafargue"
@@ -44,6 +63,14 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 <--->
 
 {{< hall
+    name="Salle Lestiboudois" 
+    src="/images/montebello.jpg"
+    map="https://maps.app.goo.gl/yWsUfhs2Va7xwrNj8"
+    address="Rue Lestiboudois"
+>}}
+
+<--->
+{{< hall
     name="Salle Florence Arthaud"
     src="/images/montebello.jpg"
     map="https://maps.app.goo.gl/QnFPhCTfcQ1uCA1D8"
@@ -51,6 +78,8 @@ Les informations pour la saison 2024/2025 arriveront au cours de l'été.
 >}}
 
 {{< /columns >}}
+
+---
 
 # L'équipe
 
