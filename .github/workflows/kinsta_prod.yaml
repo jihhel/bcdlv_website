@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Dump url
-        run: echo "${{ steps.pages.outputs.base_url }}"
-
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
@@ -70,8 +67,8 @@ jobs:
           path: public
       - name: Push artifact
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-username@users.noreply.github.com'
+          git config --global user.name "${{ github.event.head_commit.author.name }}"
+          git config --global user.email "${{ github.event.head_commit.author.email }}"
           git add -f public
-          git commit -am "Commit new artifact"
+          git commit -am "Commit new artifact from commit ${{ github.event.head_commit.id }}"
           git push
